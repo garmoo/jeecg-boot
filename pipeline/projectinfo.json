@@ -7,8 +7,6 @@
         "mavenfilepath": "",
         "jdk": "8",
         "buildshell": " mvn package -Dmaven.test.skip=true ",
-        "buildsections": [
-            
-        ]
+        "buildsections": []
     }
 ]
