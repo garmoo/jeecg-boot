@@ -2,11 +2,44 @@
     {
         "language": "java",
         "buildimage": "192.168.37.100/devops-release-docker/maven:3.6.3-jdk-8",
-        "srcpath": "jeecg-boot",
+        "srcpath": "dms",
         "initshell": "",
-        "mavenfilepath": "",
+        "mavenfilepath": "dms/tools/maven-settings.xml",
         "jdk": "8",
         "buildshell": " mvn package -Dmaven.test.skip=true ",
-        "buildsections": []
+        "buildsections": [
+            {
+                "servicename": "soar-java",
+                "buildpath": "",
+                "buildshell": "",
+                "target": "dms/soar-java/target",
+                "products": [
+                    {
+                        "type": "docker",
+                        "imgtag": "`date '+%y%m%d'`${gitVer}|cut -c1-14| xargs echo -n",
+                        "path": "dms/soar-java/deploy",
+                        "initcmd": "",
+                        "reponame": "drdp-snapshot-docker-local"
+                    }
+                ],
+                "test": {}
+            },
+            {
+                "servicename": "calcite",
+                "buildpath": "",
+                "buildshell": "",
+                "target": "dms/calcite/target",
+                "products": [
+                    {
+                        "type": "docker",
+                        "imgtag": "`date '+%y%m%d'`${gitVer}|cut -c1-14| xargs echo -n",
+                        "path": "dms/calcite/deploy",
+                        "initcmd": "",
+                        "reponame": "drdp-snapshot-docker-local"
+                    }
+                ],
+                "test": {}
+            }
+        ]
     }
 ]
