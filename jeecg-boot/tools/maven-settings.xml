@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <localRepository>/home/drdp-jenkins/.m2</localRepository>
+  <servers>
+    <server>
+      <username>zhaohua</username>
+      <password>AKCp5fUYXq4FYwcZXxF4tYJtjK7ggkCd7PyS6b3aq9ePfLVh91tNqqByZaHs3HXvEg7DhAd69</password>
+      <id>central</id>
+    </server>
+    <server>
+      <username>zhaohua</username>
+      <password>AKCp5fUYXq4FYwcZXxF4tYJtjK7ggkCd7PyS6b3aq9ePfLVh91tNqqByZaHs3HXvEg7DhAd69</password>
+      <id>snapshots</id>
+    </server>
+  </servers>
+  <profiles>
+    <profile>
+      <repositories>
+        <repository>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>central</id>
+          <name>drdp-maven-virtual</name>
+          <url>https://artifact.ctrdc.com/artifactory/drdp-maven-virtual</url>
+        </repository>
+        <repository>
+          <snapshots />
+          <id>snapshots</id>
+          <name>drdp-maven-virtual</name>
+          <url>https://artifact.ctrdc.com/artifactory/drdp-maven-virtual</url>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>central</id>
+          <name>drdp-maven-virtual</name>
+          <url>https://artifact.ctrdc.com/artifactory/drdp-maven-virtual</url>
+        </pluginRepository>
+        <pluginRepository>
+          <snapshots />
+          <id>snapshots</id>
+          <name>drdp-maven-virtual</name>
+          <url>https://artifact.ctrdc.com/artifactory/drdp-maven-virtual</url>
+        </pluginRepository>
+      </pluginRepositories>
+      <id>artifactory</id>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>artifactory</activeProfile>
+  </activeProfiles>
+</settings>
+
