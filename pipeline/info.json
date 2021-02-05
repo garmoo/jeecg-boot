@@ -4,7 +4,7 @@
     "buildimage": "192.168.37.100/devops-release-docker/maven:3.6.3-jdk-8",
     "srcpath": "jeecg-boot",
     "initshell": "",
-    "mavenfilepath": "",
+    "mavenfilepath": "jeecg-boot/tools/maven-settings.xml",
     "jdk": "8",
     "buildshell": " mvn package -Dmaven.test.skip=true ",
     "buildsections": []
